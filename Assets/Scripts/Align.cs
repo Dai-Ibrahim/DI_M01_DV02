@@ -10,16 +10,12 @@ public class Align
     float maxAngularAcceleration = 100f; // 5
     float maxRotation = 45f; // maxAngularVelocity
 
-    // the radius for arriving at the myBoi
-    // the radius for beginning to slow down
+    //Set radius where myBoi starts to slow down
     float slowRadius = 10f;
 
-    // the time over which to achieve myBoi speed
-    float timeToTarget = 0.1f;
+    float timeToTarget = 0.1f;//Get up to speed time
 
-    // returns the angle in degrees that we want to align with
-    // Align will rotate to match the myBoi's oriention
-    // sub-classes can overwrite this function to set a different myBoi angle e.g. to face a myBoi
+   
     public virtual float getMyBoiAngle()
     {
         return myBoi.transform.eulerAngles.y;
@@ -55,9 +51,8 @@ public class Align
         result.angularVelocity= myBoiRotation - currentAngularVelocity;
         result.angularVelocity/= timeToTarget;
 
-        // check if the acceleration is too great
         float angularAcceleration = Mathf.Abs(result.angularVelocity);
-        if (angularAcceleration > maxAngularAcceleration)
+        if (angularAcceleration > maxAngularAcceleration) //is acceleration going over the max
         {
             result.angularVelocity/= angularAcceleration;
             result.angularVelocity*= maxAngularAcceleration;
