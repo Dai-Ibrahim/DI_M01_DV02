@@ -115,29 +115,4 @@ public class Kinematic : MonoBehaviour
         transform.eulerAngles += angularVelocityIncrement;
     }
 
-    public void SetSeeking()
-    {
-        choiceOfBehavior= steeringBehaviors.Seek;
-    }
-    public void SetFleeing()
-    {
-        choiceOfBehavior= steeringBehaviors.Flee;
-    }
-    public void SetArriving()
-    {
-        choiceOfBehavior= steeringBehaviors.Arrive;
-    }
-  
-    public void SetFacing()
-    {
-        choiceOfBehavior= steeringBehaviors.Face;
-    }
-    public void SetLooking()
-    {
-        choiceOfBehavior= steeringBehaviors.LookWhereGoing;
-    }
-	public void SetAligning()
-    {
-        choiceOfBehavior= steeringBehaviors.Align;
-    }
 }
