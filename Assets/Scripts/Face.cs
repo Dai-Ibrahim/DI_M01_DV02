@@ -8,7 +8,6 @@ public class Face : Align
 
     public SteeringOutput getSteering()
     {
-        //Calculate myBoi to delegate to align
         Vector3 direction = myBoi.transform.position - selectedBoi.transform.position;
         if (direction.magnitude == 0)
             return null;
