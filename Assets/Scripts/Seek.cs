@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Seek
 {
-    public Kinematic myBoi; //target
-    public Kinematic selectedBoi; //char
+    public Kinematic myBoi; 
+    public Kinematic selectedBoi; 
 
     public float maxAcceleration = 15f;
 
@@ -15,7 +15,6 @@ public class Seek
         SteeringOutput result = new SteeringOutput();
         result.linearVelocity = myBoi.transform.position - selectedBoi.transform.position;
 
-        // give full acceleration along this direction
         result.linearVelocity.Normalize();
         result.linearVelocity *= maxAcceleration;
 
