@@ -5,6 +5,6 @@ using UnityEngine;
 public class SteeringOutput 
 {
     public Vector3 linearVelocity;
-	public float angularVelocity; //rotation
+	public float angularVelocity; 
 	
 }
